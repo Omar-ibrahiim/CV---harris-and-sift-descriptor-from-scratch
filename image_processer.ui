@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1067</width>
+    <height>821</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1067</width>
+    <height>821</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Image Processer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Filters</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>13</y>
+          <width>1021</width>
+          <height>701</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="maximumSize">
+              <size>
+               <width>791</width>
+               <height>41</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>MV Boli</family>
+               <pointsize>20</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Choose a certain type of noise</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="noise_comboBox">
+             <property name="maximumSize">
+              <size>
+               <width>491</width>
+               <height>31</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>Salt&amp;pepper</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gaussian</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>uniform</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="maximumSize">
+              <size>
+               <width>791</width>
+               <height>51</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>MV Boli</family>
+               <pointsize>20</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Choose a certain type of filters</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="filters_comboBox">
+             <property name="maximumSize">
+              <size>
+               <width>491</width>
+               <height>31</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>average filter</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gaussian filter</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Median filter</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Freq. low pass filter</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Freq. high pass filter</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="font">
+              <font>
+               <family>MV Boli</family>
+               <pointsize>20</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Choose a certain type of Edge detector</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="Edge_comboBox">
+             <property name="maximumSize">
+              <size>
+               <width>491</width>
+               <height>31</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>Sobel Edge</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Roberts Edge</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Perwitt Edge</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Canny Edge</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="maximumSize">
+                <size>
+                 <width>331</width>
+                 <height>51</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>MV Boli</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>  Original Image</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="original_image">
+               <property name="maximumSize">
+                <size>
+                 <width>331</width>
+                 <height>429</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="maximumSize">
+                <size>
+                 <width>241</width>
+                 <height>51</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>MV Boli</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>  Noisy Image </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="noisy_image">
+               <property name="maximumSize">
+                <size>
+                 <width>331</width>
+                 <height>429</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="maximumSize">
+                <size>
+                 <width>281</width>
+                 <height>51</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>MV Boli</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>  filtered Image </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="filtered_image">
+               <property name="maximumSize">
+                <size>
+                 <width>331</width>
+                 <height>429</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Histogram</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>12</x>
+          <y>12</y>
+          <width>1021</width>
+          <height>701</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,5">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="font">
+                <font>
+                 <family>MV Boli</family>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>            INPUT IMAGE</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="ip_img">
+               <property name="maximumSize">
+                <size>
+                 <width>501</width>
+                 <height>301</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,5">
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="font">
+                <font>
+                 <family>MV Boli</family>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>               HISTOGRAM</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="ip_img_2">
+               <property name="maximumSize">
+                <size>
+                 <width>501</width>
+                 <height>301</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,5">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="font">
+                <font>
+                 <family>MV Boli</family>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>              HISTOGRAM</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="ip_img_3">
+               <property name="maximumSize">
+                <size>
+                 <width>501</width>
+                 <height>301</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_9" stretch="0,5">
+             <item>
+              <widget class="QLabel" name="label_9">
+               <property name="font">
+                <font>
+                 <family>MV Boli</family>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>             HISTOGRAM</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="ip_img_4">
+               <property name="maximumSize">
+                <size>
+                 <width>501</width>
+                 <height>301</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Hyprid </string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_23">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_22" stretch="2,2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_19" stretch="0,5">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="font">
+                 <font>
+                  <family>MV Boli</family>
+                  <pointsize>15</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>            INPUT IMAGE(1)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="ip_hyp_img1">
+                <property name="maximumSize">
+                 <size>
+                  <width>501</width>
+                  <height>301</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_20" stretch="0,5">
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="font">
+                 <font>
+                  <family>MV Boli</family>
+                  <pointsize>15</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>            INPUT IMAGE(2)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="ip_hyp_img2">
+                <property name="maximumSize">
+                 <size>
+                  <width>501</width>
+                  <height>301</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_21" stretch="0,5">
+            <item>
+             <widget class="QLabel" name="label_23">
+              <property name="font">
+               <font>
+                <family>MV Boli</family>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>                                     HYPRID IMAGE </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="op_hyp_img">
+              <property name="maximumSize">
+               <size>
+                <width>1013</width>
+                <height>303</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Image">
+       <attribute name="title">
+        <string>Image</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>11</y>
+          <width>1021</width>
+          <height>701</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_10" stretch="0,7">
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="font">
+              <font>
+               <family>MV Boli</family>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>            INPUT IMAGE</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="ip_img_eq">
+             <property name="maximumSize">
+              <size>
+               <width>501</width>
+               <height>600</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_11" stretch="0,7">
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="font">
+              <font>
+               <family>MV Boli</family>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>           Equalized IMAGE</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="op_img_eq">
+             <property name="maximumSize">
+              <size>
+               <width>501</width>
+               <height>600</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Image Mathcing</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>1021</width>
+          <height>701</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_12">
+             <item>
+              <widget class="QLabel" name="label_16">
+               <property name="maximumSize">
+                <size>
+                 <width>151</width>
+                 <height>31</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Input Image</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="ip_img_corner">
+               <property name="maximumSize">
+                <size>
+                 <width>471</width>
+                 <height>340</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_13">
+             <item>
+              <widget class="QLabel" name="label_15">
+               <property name="maximumSize">
+                <size>
+                 <width>151</width>
+                 <height>31</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Query Image</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="ip_img_qury">
+               <property name="maximumSize">
+                <size>
+                 <width>471</width>
+                 <height>281</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QLabel" name="label_17">
+             <property name="maximumSize">
+              <size>
+               <width>181</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Matched Image</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="img_match">
+             <property name="maximumSize">
+              <size>
+               <width>501</width>
+               <height>671</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1067</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_Image"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>more</string>
+    </property>
+    <addaction name="actionHistogram"/>
+    <addaction name="actionHyprid_Image"/>
+    <addaction name="actionRGB_Histogram"/>
+    <addaction name="actionImage_Equalization"/>
+    <addaction name="actionImage_Normalization"/>
+    <addaction name="actionGlobal_Threshold"/>
+    <addaction name="actionLocal_Threshold"/>
+    <addaction name="actionImage_Matching"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuOptions"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLoad_Image">
+   <property name="text">
+    <string>Load Image</string>
+   </property>
+  </action>
+  <action name="actionHistogram">
+   <property name="text">
+    <string>Histogram</string>
+   </property>
+  </action>
+  <action name="actionHyprid_Image">
+   <property name="text">
+    <string>Hyprid Image</string>
+   </property>
+  </action>
+  <action name="actionRGB_Histogram">
+   <property name="text">
+    <string>RGB Histogram</string>
+   </property>
+  </action>
+  <action name="actionImage_Equalization">
+   <property name="text">
+    <string>Image Equalization</string>
+   </property>
+  </action>
+  <action name="actionImage_Normalization">
+   <property name="text">
+    <string>Image Normalization</string>
+   </property>
+  </action>
+  <action name="actionGlobal_Threshold">
+   <property name="text">
+    <string>Global Threshold</string>
+   </property>
+  </action>
+  <action name="actionLocal_Threshold">
+   <property name="text">
+    <string>Local Threshold</string>
+   </property>
+  </action>
+  <action name="actionActive_Contour">
+   <property name="text">
+    <string>Active Contour</string>
+   </property>
+  </action>
+  <action name="actionCircle_Detection">
+   <property name="text">
+    <string>Image Matching </string>
+   </property>
+  </action>
+  <action name="actionLine_Detection">
+   <property name="text">
+    <string>Line Detection</string>
+   </property>
+  </action>
+  <action name="actionImage_Matching">
+   <property name="text">
+    <string>Image Matching </string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
